@@ -15,7 +15,7 @@
       scroll-behavior: smooth; 
     }
     
-    /* Fire Particles Background (Particles.js) */
+    /* Particles Background */
     #particles-js { 
       position: fixed; 
       top: 0; left: 0; 
@@ -24,7 +24,7 @@
       z-index: -2; 
     }
     
-    /* Entrance Fire Overlay */
+    /* Fire Entrance Overlay */
     #fire-overlay {
       position: fixed;
       top: 0;
@@ -55,11 +55,14 @@
       font-size: 1.5em; 
       font-weight: bold;
       margin-bottom: 10px;
+      text-align: center;
     }
     nav ul {
       list-style: none;
       display: flex;
       gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
     }
     nav ul li a { 
       text-decoration: none; 
@@ -72,16 +75,24 @@
     .container {
       max-width: 1000px;
       margin: 0 auto;
-      padding: 140px 20px 40px; /* compensando navbar */
+      padding: 140px 20px 40px; /* Compensando a altura do navbar */
       text-align: center;
       position: relative;
       z-index: 1;
     }
     
     /* Seções */
-    section { padding: 100px 20px; text-align: center; min-height: 100vh; }
+    section { 
+      padding: 100px 20px; 
+      text-align: center; 
+      min-height: 100vh; 
+    }
     header { padding-top: 80px; }
-    header h1 { font-size: 3.5em; margin-bottom: 20px; animation: fadeInDown 1s; }
+    header h1 { 
+      font-size: 3.5em; 
+      margin-bottom: 20px; 
+      animation: fadeInDown 1s; 
+    }
     @keyframes fadeInDown {
       from { opacity: 0; transform: translateY(-30px); }
       to { opacity: 1; transform: translateY(0); }
@@ -101,7 +112,7 @@
     }
     .btn:hover { background: #0d8bf2; }
     
-    /* Seção Social - Instagram e TikTok Lado a Lado */
+    /* Seção Social: Instagram e TikTok Lado a Lado */
     #social-section {
       display: flex;
       justify-content: center;
@@ -138,7 +149,7 @@
       margin: 0 auto;
     }
     
-    /* Seção "Como Ter Seu Próprio Site" e Contato mantêm estilo similar */
+    /* Seção "Como Ter Seu Próprio Site" e Contato */
     #own-site p, #contact p { 
       font-size: 1.1em; 
       max-width: 800px; 
@@ -152,6 +163,15 @@
       text-align: center;
     }
     footer a { color: #1DA1F2; text-decoration: none; }
+    
+    /* Media Queries para Responsividade */
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.5em; }
+      nav { padding: 10px 20px; }
+      .container { padding: 120px 10px 30px; }
+      section { padding: 60px 10px; }
+      .btn { padding: 12px 25px; font-size: 0.9em; }
+    }
   </style>
 </head>
 <body>
@@ -179,7 +199,7 @@
       <h1>@lorenzoedtz</h1>
     </header>
     
-    <!-- Seção Social: TikTok e Instagram lado a lado -->
+    <!-- Seção Social: TikTok e Instagram Lado a Lado -->
     <section id="social-section">
       <div class="social-card">
         <a href="https://www.tiktok.com/@lorenzoedtz" target="_blank">
@@ -199,7 +219,7 @@
     <section id="edit-section">
       <h2>Veja Meu Edit</h2>
       <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@lorenzoedtz/video/7472145699560279302" data-video-id="7472145699560279302" style="max-width: 605px; min-width: 325px; margin: 0 auto;">
-        <section> </section>
+        <section></section>
       </blockquote>
       <script async src="https://www.tiktok.com/embed.js"></script>
     </section>
