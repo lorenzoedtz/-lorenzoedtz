@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>@lorenzoedtz - Site Profissional</title>
+  <style>
+    /* Reset Global */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { 
+      font-family: 'Segoe UI', sans-serif; 
+      height: 100%; 
+      background: #0d0d0d; 
+      color: #fff; 
+      scroll-behavior: smooth; 
+    }
+    
+    /* Fire Particles Background (Particles.js) */
+    #particles-js { 
+      position: fixed; 
+      top: 0; left: 0; 
+      width: 100%; 
+      height: 100%; 
+      z-index: -2; 
+    }
+    
+    /* Entrance Fire Overlay */
+    #fire-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(ellipse at center, rgba(255,69,0,0.8) 0%, rgba(0,0,0,0.8) 70%);
+      z-index: 100;
+      animation: fadeOut 3s forwards;
+    }
+    @keyframes fadeOut {
+      0% { opacity: 1; }
+      100% { opacity: 0; visibility: hidden; }
+    }
+    
+    /* Navbar Centralizada */
+    nav {
+      position: fixed;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 15px 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 10;
+    }
+    nav .logo { 
+      font-size: 1.5em; 
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    nav ul li a { 
+      text-decoration: none; 
+      color: #fff; 
+      transition: color 0.3s; 
+    }
+    nav ul li a:hover { color: #1DA1F2; }
+    
+    /* Container Principal */
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 140px 20px 40px; /* compensando navbar */
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    
+    /* Seções */
+    section { padding: 100px 20px; text-align: center; min-height: 100vh; }
+    header { padding-top: 80px; }
+    header h1 { font-size: 3.5em; margin-bottom: 20px; animation: fadeInDown 1s; }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    /* Botões */
+    .btn {
+      display: inline-block;
+      background: #1DA1F2;
+      padding: 15px 30px;
+      border-radius: 5px;
+      text-decoration: none;
+      color: #fff;
+      transition: background 0.3s;
+      font-size: 1em;
+      margin-top: 20px;
+    }
+    .btn:hover { background: #0d8bf2; }
+    
+    /* Seção Social - Instagram e TikTok Lado a Lado */
+    #social-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+      flex-wrap: wrap;
+    }
+    .social-card {
+      text-align: center;
+    }
+    .social-card img {
+      width: 80px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+    .social-card a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.1em;
+      transition: color 0.3s;
+    }
+    .social-card a:hover { color: #1DA1F2; }
+    
+    /* Seção "Veja Meu Edit" com Tema Escuro */
+    #edit-section {
+      background: #111;
+      padding: 50px 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    }
+    #edit-section h2 { margin-bottom: 20px; }
+    .tiktok-embed {
+      margin: 0 auto;
+    }
+    
+    /* Seção "Como Ter Seu Próprio Site" e Contato mantêm estilo similar */
+    #own-site p, #contact p { 
+      font-size: 1.1em; 
+      max-width: 800px; 
+      margin: 0 auto 20px auto; 
+    }
+    
+    /* Footer */
+    footer {
+      padding: 30px 20px;
+      background: rgba(0,0,0,0.8);
+      text-align: center;
+    }
+    footer a { color: #1DA1F2; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <!-- Fire Entrance Overlay -->
+  <div id="fire-overlay"></div>
+  
+  <!-- Fire Particles Background -->
+  <div id="particles-js"></div>
+  
+  <!-- Navbar Centralizada -->
+  <nav>
+    <div class="logo">@lorenzoedtz</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#edit-section">Veja Meu Edit</a></li>
+      <li><a href="#own-site">Seu Site</a></li>
+      <li><a href="#contact">Contato</a></li>
+    </ul>
+  </nav>
+  
+  <!-- Conteúdo Principal -->
+  <div class="container">
+    <!-- Home / Cabeçalho -->
+    <header id="home">
+      <h1>@lorenzoedtz</h1>
+    </header>
+    
+    <!-- Seção Social: TikTok e Instagram lado a lado -->
+    <section id="social-section">
+      <div class="social-card">
+        <a href="https://www.tiktok.com/@lorenzoedtz" target="_blank">
+          <img src="https://t.ctcdn.com.br/G1ods9z05pYCE3TlEXZGRIGG3Sc=/i490153.jpeg" alt="Logo TikTok">
+          TikTok
+        </a>
+      </div>
+      <div class="social-card">
+        <a href="https://www.instagram.com/lorenzoedtz?igsh=YXRkZHcxbGlzcnI5" target="_blank">
+          <img src="https://cdn.pixabay.com/photo/2021/06/15/12/14/instagram-6338393_1280.png" alt="Logo Instagram">
+          Instagram
+        </a>
+      </div>
+    </section>
+    
+    <!-- Seção "Veja Meu Edit" com Tema Escuro -->
+    <section id="edit-section">
+      <h2>Veja Meu Edit</h2>
+      <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@lorenzoedtz/video/7472145699560279302" data-video-id="7472145699560279302" style="max-width: 605px; min-width: 325px; margin: 0 auto;">
+        <section> </section>
+      </blockquote>
+      <script async src="https://www.tiktok.com/embed.js"></script>
+    </section>
+    
+    <!-- Seção Como Ter Seu Próprio Site -->
+    <section id="own-site">
+      <h2>Como ter seu próprio site</h2>
+      <p>Transforme sua presença online com um site profissional. Saiba mais sobre nossos serviços e soluções personalizadas para destacar seu negócio.</p>
+      <a href="https://discord.gg/qnyQDMp7NH" target="_blank" class="btn">Entre no Discord</a>
+    </section>
+    
+    <!-- Seção Contato -->
+    <section id="contact">
+      <h2>Contato</h2>
+      <p>Para dúvidas e mais informações, entre em contato pelo Discord ou pelas nossas redes sociais.</p>
+      <a href="https://discord.gg/qnyQDMp7NH" target="_blank" class="btn">Contato Discord</a>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+      <p>Site feito por <a href="https://discord.gg/qnyQDMp7NH" target="_blank">Scarlet Store</a></p>
+    </footer>
+  </div>
+  
+  <!-- Particles.js Script com Configuração de Fogo -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+        "color": { "value": ["#ff4500", "#ffa500", "#ff8c00"] },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.7 },
+        "size": { "value": 4, "random": true },
+        "line_linked": { "enable": false },
+        "move": {
+          "enable": true,
+          "speed": 6,
+          "direction": "top",
+          "random": true,
+          "straight": false,
+          "out_mode": "out"
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": { "enable": true, "mode": "repulse" },
+          "onclick": { "enable": true, "mode": "push" }
+        },
+        "modes": {
+          "repulse": { "distance": 100, "duration": 0.4 },
+          "push": { "particles_nb": 4 }
+        }
+      },
+      "retina_detect": true
+    });
+  </script>
+</body>
+</html>
