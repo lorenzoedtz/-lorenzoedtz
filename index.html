@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@lorenzoedtz - Site Profissional</title>
+    <title>@lorenzoedtz - Edição e Criação</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="style.css">
+
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 <body>
@@ -17,120 +21,76 @@
     <nav id="navbar">
         <div class="nav-container">
             <a href="#home" class="logo">@lorenzoedtz</a>
-            <ul>
-                <li><a href="#home">Home</a></li>
+            <ul class="nav-links">
+                <li><a href="#home">Início</a></li>
                 <li><a href="#social">Redes</a></li>
-                <li><a href="#edit">Meu Edit</a></li>
-                <li><a href="#own-site">Seu Site</a></li>
-                <li><a href="#settings">Configurações</a></li>
+                <li><a href="#edit">Edits</a></li>
+                <li><a href="#services">Serviços</a></li>
                 <li><a href="#contact">Contato</a></li>
             </ul>
+            <button id="settings-trigger" class="settings-btn" aria-label="Abrir Configurações">
+                <i class="fas fa-cog"></i>
+            </button>
         </div>
     </nav>
 
     <main>
-        <header id="home" class="section full-height">
-            <div class="container">
-                <h1 class="animate-fade-in-down">Bem-vindo ao site de</h1>
-                <h2 class="animate-fade-in-up">@lorenzoedtz</h2>
-                <p class="subtitle animate-fade-in">Seu editor e criador de conteúdo.</p>
-                <a href="#social" class="btn btn-primary">Minhas Redes</a>
+        <section id="home" class="section full-height hero">
+            <div class="container hero-content">
+                <h1 class="animate-on-scroll fade-in-down">Lorenzo Edtz</h1>
+                <p class="subtitle animate-on-scroll fade-in-up delay-1">Edição de Vídeos & Conteúdo Criativo</p>
+                <div class="animate-on-scroll fade-in-up delay-2">
+                    <a href="#edit" class="btn btn-primary">Ver Meus Edits</a>
+                    <a href="#contact" class="btn btn-secondary">Entrar em Contato</a>
+                </div>
             </div>
-        </header>
+        </section>
 
         <section id="social" class="section">
             <div class="container">
-                <h2>Minhas Redes Sociais</h2>
+                <h2 class="section-title animate-on-scroll fade-in">Siga-me nas Redes</h2>
                 <div class="social-grid">
-                    <div class="social-card">
-                        <a href="https://www.tiktok.com/@lorenzoedtz" target="_blank" title="TikTok @lorenzoedtz">
-                            <i class="fab fa-tiktok social-icon"></i>
-                            <h3>TikTok</h3>
-                            <p>@lorenzoedtz</p>
-                        </a>
-                    </div>
-                    <div class="social-card">
-                        <a href="https://www.instagram.com/lorenzoedtz?igsh=YXRkZHcxbGlzcnI5" target="_blank" title="Instagram @lorenzoedtz">
-                            <i class="fab fa-instagram social-icon"></i>
-                            <h3>Instagram</h3>
-                            <p>@lorenzoedtz</p>
-                        </a>
-                    </div>
+                    <a href="https://www.tiktok.com/@lorenzoedtz" target="_blank" class="social-card animate-on-scroll slide-in-left" title="TikTok @lorenzoedtz">
+                        <i class="fab fa-tiktok social-icon"></i>
+                        <h3>TikTok</h3>
+                        <span>@lorenzoedtz</span>
+                    </a>
+                    <a href="https://www.instagram.com/lorenzoedtz?igsh=YXRkZHcxbGlzcnI5" target="_blank" class="social-card animate-on-scroll slide-in-right" title="Instagram @lorenzoedtz">
+                        <i class="fab fa-instagram social-icon"></i>
+                        <h3>Instagram</h3>
+                        <span>@lorenzoedtz</span>
+                    </a>
+                     <a href="https://discord.gg/qnyQDMp7NH" target="_blank" class="social-card animate-on-scroll slide-in-left delay-1" title="Comunidade no Discord">
+                        <i class="fab fa-discord social-icon"></i>
+                        <h3>Discord</h3>
+                        <span>Comunidade</span>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <section id="edit" class="section section-dark">
+        <section id="edit" class="section section-alt">
             <div class="container">
-                <h2>Veja Meu Último Edit</h2>
-                <div class="edit-wrapper">
-                     <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@lorenzoedtz/video/7472145699560279302" data-video-id="7472145699560279302" style="max-width: 605px; min-width: 325px; margin: 20px auto;">
-                        <section> <a target="_blank" title="@lorenzoedtz" href="https://www.tiktok.com/@lorenzoedtz?refer=embed">@lorenzoedtz</a> <p></p> <a target="_blank" title="♬ som original - @lorenzoedtz" href="https://www.tiktok.com/music/som-original-7472145740986125061?refer=embed">♬ som original - @lorenzoedtz</a> </section>
+                <h2 class="section-title animate-on-scroll fade-in">Meu Último Edit</h2>
+                <div class="edit-wrapper animate-on-scroll fade-in-up">
+                     <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@lorenzoedtz/video/7472145699560279302" data-video-id="7472145699560279302" style="max-width: 500px; min-width: 300px; margin: 20px auto; background: #fff; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                        <section style="padding: 15px; text-align: center;">
+                           <a target="_blank" title="@lorenzoedtz" style="font-weight: bold; color: #111; text-decoration: none;" href="https://www.tiktok.com/@lorenzoedtz?refer=embed">@lorenzoedtz</a>
+                           <p style="font-size: 0.9em; color: #555; margin: 5px 0;">Assista ao vídeo completo no TikTok!</p>
+                           <a target="_blank" title="♬ som original - @lorenzoedtz" style="font-size: 0.8em; color: #888; text-decoration: none;" href="https://www.tiktok.com/music/som-original-7472145740986125061?refer=embed">♬ som original - @lorenzoedtz</a>
+                       </section>
                     </blockquote>
                     <script async src="https://www.tiktok.com/embed.js"></script>
                 </div>
-                 <a href="https://www.tiktok.com/@lorenzoedtz" target="_blank" class="btn btn-secondary">Ver mais no TikTok</a>
-            </div>
-        </section>
-
-        <section id="own-site" class="section">
-            <div class="container">
-                <h2>Quer ter seu Próprio Site?</h2>
-                <p>Transforme sua presença online com um site profissional como este! Ideal para criadores, freelancers e pequenas empresas.</p>
-                <p>Oferecemos soluções personalizadas para destacar você ou seu negócio na internet.</p>
-                <a href="https://discord.gg/qnyQDMp7NH" target="_blank" class="btn btn-primary">
-                    <i class="fab fa-discord"></i> Saiba Mais no Discord
-                </a>
-            </div>
-        </section>
-
-        <section id="settings" class="section section-dark">
-            <div class="container">
-                <h2>Configurações</h2>
-                <div class="settings-options">
-                    <div class="setting-item">
-                        <span>Tema da Página:</span>
-                        <div class="theme-switch-wrapper">
-                             <label class="theme-switch" for="theme-checkbox">
-                                <input type="checkbox" id="theme-checkbox" />
-                                <div class="slider round">
-                                    <span class="icon sun"><i class="fas fa-sun"></i></span>
-                                    <span class="icon moon"><i class="fas fa-moon"></i></span>
-                                </div>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="setting-item">
-                        <span>Fundo Animado:</span>
-                         <p style="font-size: 0.8em; opacity: 0.7;">(Controle para ligar/desligar em breve)</p>
-                    </div>
+                <div class="text-center animate-on-scroll fade-in-up delay-1">
+                    <a href="https://www.tiktok.com/@lorenzoedtz" target="_blank" class="btn btn-secondary">
+                        <i class="fab fa-tiktok"></i> Ver Perfil Completo
+                    </a>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="section">
-            <div class="container">
-                <h2>Entre em Contato</h2>
-                <p>Tem alguma dúvida, sugestão ou proposta? Fale comigo diretamente pelo Discord ou envie uma mensagem nas redes sociais.</p>
-                <div class="contact-buttons">
-                     <a href="https://discord.gg/qnyQDMp7NH" target="_blank" class="btn btn-secondary">
-                         <i class="fab fa-discord"></i> Contato via Discord
-                     </a>
-                     <a href="https://www.instagram.com/lorenzoedtz?igsh=YXRkZHcxbGlzcnI5" target="_blank" class="btn btn-secondary">
-                         <i class="fab fa-instagram"></i> Mensagem no Instagram
-                     </a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; <span id="current-year"></span> @lorenzoedtz. Todos os direitos reservados.</p>
-            <p>Site desenvolvido por <a href="https://discord.gg/qnyQDMp7NH" target="_blank">Scarlet Store</a>.</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+        <section id="services" class="section">
+             <div class="container">
+                <h2 class="section-title animate-on-scroll fade-in">Crie Seu Próprio Espaço Online</h2>
+                <p class="section-subtitle animate-
