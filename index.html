@@ -1,282 +1,136 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>@lorenzoedtz - Site Profissional</title>
-  <style>
-    /* Reset Global */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html, body { 
-      font-family: 'Segoe UI', sans-serif; 
-      height: 100%; 
-      background: #0d0d0d; 
-      color: #fff; 
-      scroll-behavior: smooth; 
-    }
-    
-    /* Particles Background */
-    #particles-js { 
-      position: fixed; 
-      top: 0; left: 0; 
-      width: 100%; 
-      height: 100%; 
-      z-index: -2; 
-    }
-    
-    /* Fire Entrance Overlay */
-    #fire-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: radial-gradient(ellipse at center, rgba(255,69,0,0.8) 0%, rgba(0,0,0,0.8) 70%);
-      z-index: 100;
-      animation: fadeOut 3s forwards;
-    }
-    @keyframes fadeOut {
-      0% { opacity: 1; }
-      100% { opacity: 0; visibility: hidden; }
-    }
-    
-    /* Navbar Centralizada */
-    nav {
-      position: fixed;
-      width: 100%;
-      background: rgba(0, 0, 0, 0.7);
-      padding: 15px 30px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      z-index: 10;
-    }
-    nav .logo { 
-      font-size: 1.5em; 
-      font-weight: bold;
-      margin-bottom: 10px;
-      text-align: center;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    nav ul li a { 
-      text-decoration: none; 
-      color: #fff; 
-      transition: color 0.3s; 
-    }
-    nav ul li a:hover { color: #1DA1F2; }
-    
-    /* Container Principal */
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 140px 20px 40px; /* Compensando a altura do navbar */
-      text-align: center;
-      position: relative;
-      z-index: 1;
-    }
-    
-    /* Seções */
-    section { 
-      padding: 100px 20px; 
-      text-align: center; 
-      min-height: 100vh; 
-    }
-    header { padding-top: 80px; }
-    header h1 { 
-      font-size: 3.5em; 
-      margin-bottom: 20px; 
-      animation: fadeInDown 1s; 
-    }
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    
-    /* Botões */
-    .btn {
-      display: inline-block;
-      background: #1DA1F2;
-      padding: 15px 30px;
-      border-radius: 5px;
-      text-decoration: none;
-      color: #fff;
-      transition: background 0.3s;
-      font-size: 1em;
-      margin-top: 20px;
-    }
-    .btn:hover { background: #0d8bf2; }
-    
-    /* Seção Social: Instagram e TikTok Lado a Lado */
-    #social-section {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 50px;
-      flex-wrap: wrap;
-    }
-    .social-card {
-      text-align: center;
-    }
-    .social-card img {
-      width: 80px;
-      border-radius: 50%;
-      margin-bottom: 10px;
-    }
-    .social-card a {
-      display: block;
-      color: #fff;
-      text-decoration: none;
-      font-size: 1.1em;
-      transition: color 0.3s;
-    }
-    .social-card a:hover { color: #1DA1F2; }
-    
-    /* Seção "Veja Meu Edit" com Tema Escuro */
-    #edit-section {
-      background: #111;
-      padding: 50px 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
-    }
-    #edit-section h2 { margin-bottom: 20px; }
-    .tiktok-embed {
-      margin: 0 auto;
-    }
-    
-    /* Seção "Como Ter Seu Próprio Site" e Contato */
-    #own-site p, #contact p { 
-      font-size: 1.1em; 
-      max-width: 800px; 
-      margin: 0 auto 20px auto; 
-    }
-    
-    /* Footer */
-    footer {
-      padding: 30px 20px;
-      background: rgba(0,0,0,0.8);
-      text-align: center;
-    }
-    footer a { color: #1DA1F2; text-decoration: none; }
-    
-    /* Media Queries para Responsividade */
-    @media (max-width: 768px) {
-      header h1 { font-size: 2.5em; }
-      nav { padding: 10px 20px; }
-      .container { padding: 120px 10px 30px; }
-      section { padding: 60px 10px; }
-      .btn { padding: 12px 25px; font-size: 0.9em; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@lorenzoedtz - Site Profissional</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 <body>
-  <!-- Fire Entrance Overlay -->
-  <div id="fire-overlay"></div>
-  
-  <!-- Fire Particles Background -->
-  <div id="particles-js"></div>
-  
-  <!-- Navbar Centralizada -->
-  <nav>
-    <div class="logo">@lorenzoedtz</div>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#edit-section">Veja Meu Edit</a></li>
-      <li><a href="#own-site">Seu Site</a></li>
-      <li><a href="#contact">Contato</a></li>
-    </ul>
-  </nav>
-  
-  <!-- Conteúdo Principal -->
-  <div class="container">
-    <!-- Home / Cabeçalho -->
-    <header id="home">
-      <h1>@lorenzoedtz</h1>
-    </header>
-    
-    <!-- Seção Social: TikTok e Instagram Lado a Lado -->
-    <section id="social-section">
-      <div class="social-card">
-        <a href="https://www.tiktok.com/@lorenzoedtz" target="_blank">
-          <img src="https://t.ctcdn.com.br/G1ods9z05pYCE3TlEXZGRIGG3Sc=/i490153.jpeg" alt="Logo TikTok">
-          TikTok
-        </a>
-      </div>
-      <div class="social-card">
-        <a href="https://www.instagram.com/lorenzoedtz?igsh=YXRkZHcxbGlzcnI5" target="_blank">
-          <img src="https://cdn.pixabay.com/photo/2021/06/15/12/14/instagram-6338393_1280.png" alt="Logo Instagram">
-          Instagram
-        </a>
-      </div>
-    </section>
-    
-    <!-- Seção "Veja Meu Edit" com Tema Escuro -->
-    <section id="edit-section">
-      <h2>Veja Meu Edit</h2>
-      <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@lorenzoedtz/video/7472145699560279302" data-video-id="7472145699560279302" style="max-width: 605px; min-width: 325px; margin: 0 auto;">
-        <section></section>
-      </blockquote>
-      <script async src="https://www.tiktok.com/embed.js"></script>
-    </section>
-    
-    <!-- Seção Como Ter Seu Próprio Site -->
-    <section id="own-site">
-      <h2>Como ter seu próprio site</h2>
-      <p>Transforme sua presença online com um site profissional. Saiba mais sobre nossos serviços e soluções personalizadas para destacar seu negócio.</p>
-      <a href="https://discord.gg/qnyQDMp7NH" target="_blank" class="btn">Entre no Discord</a>
-    </section>
-    
-    <!-- Seção Contato -->
-    <section id="contact">
-      <h2>Contato</h2>
-      <p>Para dúvidas e mais informações, entre em contato pelo Discord ou pelas nossas redes sociais.</p>
-      <a href="https://discord.gg/qnyQDMp7NH" target="_blank" class="btn">Contato Discord</a>
-    </section>
-    
-    <!-- Footer -->
+    <div id="particles-js"></div>
+
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">@lorenzoedtz</a>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#social">Redes</a></li>
+                <li><a href="#edit">Meu Edit</a></li>
+                <li><a href="#own-site">Seu Site</a></li>
+                <li><a href="#settings">Configurações</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <header id="home" class="section full-height">
+            <div class="container">
+                <h1 class="animate-fade-in-down">Bem-vindo ao site de</h1>
+                <h2 class="animate-fade-in-up">@lorenzoedtz</h2>
+                <p class="subtitle animate-fade-in">Seu editor e criador de conteúdo.</p>
+                <a href="#social" class="btn btn-primary">Minhas Redes</a>
+            </div>
+        </header>
+
+        <section id="social" class="section">
+            <div class="container">
+                <h2>Minhas Redes Sociais</h2>
+                <div class="social-grid">
+                    <div class="social-card">
+                        <a href="https://www.tiktok.com/@lorenzoedtz" target="_blank" title="TikTok @lorenzoedtz">
+                            <i class="fab fa-tiktok social-icon"></i>
+                            <h3>TikTok</h3>
+                            <p>@lorenzoedtz</p>
+                        </a>
+                    </div>
+                    <div class="social-card">
+                        <a href="https://www.instagram.com/lorenzoedtz?igsh=YXRkZHcxbGlzcnI5" target="_blank" title="Instagram @lorenzoedtz">
+                            <i class="fab fa-instagram social-icon"></i>
+                            <h3>Instagram</h3>
+                            <p>@lorenzoedtz</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="edit" class="section section-dark">
+            <div class="container">
+                <h2>Veja Meu Último Edit</h2>
+                <div class="edit-wrapper">
+                     <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@lorenzoedtz/video/7472145699560279302" data-video-id="7472145699560279302" style="max-width: 605px; min-width: 325px; margin: 20px auto;">
+                        <section> <a target="_blank" title="@lorenzoedtz" href="https://www.tiktok.com/@lorenzoedtz?refer=embed">@lorenzoedtz</a> <p></p> <a target="_blank" title="♬ som original - @lorenzoedtz" href="https://www.tiktok.com/music/som-original-7472145740986125061?refer=embed">♬ som original - @lorenzoedtz</a> </section>
+                    </blockquote>
+                    <script async src="https://www.tiktok.com/embed.js"></script>
+                </div>
+                 <a href="https://www.tiktok.com/@lorenzoedtz" target="_blank" class="btn btn-secondary">Ver mais no TikTok</a>
+            </div>
+        </section>
+
+        <section id="own-site" class="section">
+            <div class="container">
+                <h2>Quer ter seu Próprio Site?</h2>
+                <p>Transforme sua presença online com um site profissional como este! Ideal para criadores, freelancers e pequenas empresas.</p>
+                <p>Oferecemos soluções personalizadas para destacar você ou seu negócio na internet.</p>
+                <a href="https://discord.gg/qnyQDMp7NH" target="_blank" class="btn btn-primary">
+                    <i class="fab fa-discord"></i> Saiba Mais no Discord
+                </a>
+            </div>
+        </section>
+
+        <section id="settings" class="section section-dark">
+            <div class="container">
+                <h2>Configurações</h2>
+                <div class="settings-options">
+                    <div class="setting-item">
+                        <span>Tema da Página:</span>
+                        <div class="theme-switch-wrapper">
+                             <label class="theme-switch" for="theme-checkbox">
+                                <input type="checkbox" id="theme-checkbox" />
+                                <div class="slider round">
+                                    <span class="icon sun"><i class="fas fa-sun"></i></span>
+                                    <span class="icon moon"><i class="fas fa-moon"></i></span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="setting-item">
+                        <span>Fundo Animado:</span>
+                         <p style="font-size: 0.8em; opacity: 0.7;">(Controle para ligar/desligar em breve)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <h2>Entre em Contato</h2>
+                <p>Tem alguma dúvida, sugestão ou proposta? Fale comigo diretamente pelo Discord ou envie uma mensagem nas redes sociais.</p>
+                <div class="contact-buttons">
+                     <a href="https://discord.gg/qnyQDMp7NH" target="_blank" class="btn btn-secondary">
+                         <i class="fab fa-discord"></i> Contato via Discord
+                     </a>
+                     <a href="https://www.instagram.com/lorenzoedtz?igsh=YXRkZHcxbGlzcnI5" target="_blank" class="btn btn-secondary">
+                         <i class="fab fa-instagram"></i> Mensagem no Instagram
+                     </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <footer>
-      <p>Site feito por <a href="https://discord.gg/qnyQDMp7NH" target="_blank">Scarlet Store</a></p>
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> @lorenzoedtz. Todos os direitos reservados.</p>
+            <p>Site desenvolvido por <a href="https://discord.gg/qnyQDMp7NH" target="_blank">Scarlet Store</a>.</p>
+        </div>
     </footer>
-  </div>
-  
-  <!-- Particles.js Script com Configuração de Fogo -->
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-  <script>
-    particlesJS("particles-js", {
-      "particles": {
-        "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
-        "color": { "value": ["#ff4500", "#ffa500", "#ff8c00"] },
-        "shape": { "type": "circle" },
-        "opacity": { "value": 0.7 },
-        "size": { "value": 4, "random": true },
-        "line_linked": { "enable": false },
-        "move": {
-          "enable": true,
-          "speed": 6,
-          "direction": "top",
-          "random": true,
-          "straight": false,
-          "out_mode": "out"
-        }
-      },
-      "interactivity": {
-        "detect_on": "canvas",
-        "events": {
-          "onhover": { "enable": true, "mode": "repulse" },
-          "onclick": { "enable": true, "mode": "push" }
-        },
-        "modes": {
-          "repulse": { "distance": 100, "duration": 0.4 },
-          "push": { "particles_nb": 4 }
-        }
-      },
-      "retina_detect": true
-    });
-  </script>
+
+    <script src="script.js"></script>
 </body>
 </html>
