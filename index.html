@@ -93,4 +93,85 @@
         <section id="services" class="section">
              <div class="container">
                 <h2 class="section-title animate-on-scroll fade-in">Crie Seu Próprio Espaço Online</h2>
-                <p class="section-subtitle animate-
+                <p class="section-subtitle animate-on-scroll fade-in-up">Quer um site profissional e personalizado como este? Ajudo criadores e negócios a terem uma presença online marcante.</p>
+                <div class="service-highlight animate-on-scroll fade-in-up delay-1">
+                    <i class="fas fa-palette service-icon"></i>
+                    <h3>Design Personalizado</h3>
+                    <p>Sites únicos que refletem sua identidade ou marca.</p>
+                </div>
+                 <div class="service-highlight animate-on-scroll fade-in-up delay-2">
+                    <i class="fas fa-mobile-alt service-icon"></i>
+                    <h3>Responsivo</h3>
+                    <p>Perfeito em qualquer dispositivo: celular, tablet ou desktop.</p>
+                </div>
+                <div class="text-center animate-on-scroll fade-in-up delay-3">
+                    <a href="https://discord.gg/qnyQDMp7NH" target="_blank" class="btn btn-primary">
+                        <i class="fab fa-discord"></i> Discutir Projeto no Discord
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll fade-in">Vamos Conversar?</h2>
+                <p class="section-subtitle animate-on-scroll fade-in-up">Envie sua dúvida, sugestão ou proposta. Estou disponível no Discord e Instagram.</p>
+                <div class="contact-buttons animate-on-scroll fade-in-up delay-1">
+                     <a href="https://discord.gg/qnyQDMp7NH" target="_blank" class="btn btn-secondary">
+                         <i class="fab fa-discord"></i> Chamar no Discord
+                     </a>
+                     <a href="https://www.instagram.com/lorenzoedtz?igsh=YXRkZHcxbGlzcnI5" target="_blank" class="btn btn-secondary">
+                         <i class="fab fa-instagram"></i> Mensagem no Instagram
+                     </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> @lorenzoedtz. Criado com <i class="fas fa-heart" style="color: var(--primary-color);"></i></p>
+            <p>Desenvolvido por <a href="https://discord.gg/qnyQDMp7NH" target="_blank">Scarlet Store</a>.</p>
+        </div>
+    </footer>
+
+    <div id="settings-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button id="modal-close-btn" class="modal-close" aria-label="Fechar Configurações">&times;</button>
+            <h3 class="modal-title">Configurações do Site</h3>
+
+            <div class="setting-group">
+                <label class="setting-label">Tema:</label>
+                <div class="theme-switch-wrapper">
+                     <label class="theme-switch" for="theme-checkbox">
+                        <input type="checkbox" id="theme-checkbox" aria-label="Alternar tema claro/escuro"/>
+                        <div class="slider round">
+                            <span class="icon light"><i class="fas fa-sun"></i></span>
+                            <span class="icon dark"><i class="fas fa-moon"></i></span>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <div class="setting-group">
+                <label class="setting-label">Cor de Destaque:</label>
+                <div class="accent-color-options" id="accent-options">
+                    <button class="color-choice" data-color="hsl(203, 89%, 53%)" style="background-color: hsl(203, 89%, 53%);" aria-label="Selecionar cor Azul"></button> <button class="color-choice" data-color="hsl(28, 100%, 50%)" style="background-color: hsl(28, 100%, 50%);" aria-label="Selecionar cor Laranja"></button> <button class="color-choice" data-color="hsl(328, 90%, 55%)" style="background-color: hsl(328, 90%, 55%);" aria-label="Selecionar cor Rosa"></button> <button class="color-choice" data-color="hsl(145, 63%, 49%)" style="background-color: hsl(145, 63%, 49%);" aria-label="Selecionar cor Verde"></button> <button class="color-choice" data-color="hsl(270, 70%, 60%)" style="background-color: hsl(270, 70%, 60%);" aria-label="Selecionar cor Roxo"></button> </div>
+            </div>
+
+            <div class="setting-group">
+                <label class="setting-label" for="particles-checkbox">Fundo Animado:</label>
+                <div class="theme-switch-wrapper">
+                     <label class="theme-switch" for="particles-checkbox">
+                        <input type="checkbox" id="particles-checkbox" aria-label="Ligar/Desligar fundo animado"/>
+                        <div class="slider round"></div>
+                     </label>
+                 </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
