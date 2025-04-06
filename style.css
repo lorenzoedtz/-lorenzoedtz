@@ -1,1 +1,503 @@
+/* Reset Global & Variáveis CSS */
+:root {
+    --primary-color: #1DA1F2; /* Azul Twitter */
+    --primary-hover: #0d8bf2;
+    --secondary-color: #657786;
+    --secondary-hover: #50606e;
+    --accent-color: #ff4500; /* Laranja/Fogo para detalhes */
 
+    --text-color-light: #ffffff;
+    --bg-color-light: rgba(255, 255, 255, 0.1); /* Fundo de cards/seções no tema claro */
+    --border-color-light: rgba(255, 255, 255, 0.2);
+
+    --text-color-dark: #14171A;
+    --bg-color-dark: rgba(0, 0, 0, 0.1); /* Fundo de cards/seções no tema escuro */
+    --border-color-dark: rgba(0, 0, 0, 0.2);
+
+    --font-family: 'Poppins', sans-serif;
+
+    /* Variáveis do Tema (Inicial = Escuro) */
+    --bg-main: #0d0d0d;
+    --bg-section-primary: #15181C; /* Um pouco mais claro que o fundo principal */
+    --bg-section-secondary: #111; /* Para seções com contraste */
+    --text-primary: #ffffff;
+    --text-secondary: #AAB8C2;
+    --border-color: var(--border-color-dark);
+    --card-bg: var(--bg-color-dark);
+    --navbar-bg: rgba(13, 13, 13, 0.8);
+    --navbar-bg-scrolled: rgba(13, 13, 13, 0.95);
+    --shadow-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Estilos para o Tema Claro */
+html[data-theme='light'] {
+    --bg-main: #f5f8fa;
+    --bg-section-primary: #ffffff;
+    --bg-section-secondary: #e1e8ed;
+    --text-primary: #14171A;
+    --text-secondary: #657786;
+    --border-color: var(--border-color-light);
+    --card-bg: var(--bg-color-light);
+    --navbar-bg: rgba(245, 248, 250, 0.8);
+    --navbar-bg-scrolled: rgba(245, 248, 250, 0.95);
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    overflow-x: hidden; /* Evitar scroll horizontal */
+}
+
+/* Fundo de Partículas */
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Fica atrás de tudo */
+    background-color: var(--bg-main); /* Cor de fundo caso particles falhe */
+    transition: background-color 0.3s ease;
+}
+
+/* Navbar */
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--navbar-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Para Safari */
+    padding: 15px 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#navbar.scrolled {
+    background-color: var(--navbar-bg-scrolled);
+    box-shadow: 0 2px 10px var(--shadow-color);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.logo:hover {
+    color: var(--primary-hover);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-primary);
+    font-weight: 400;
+    padding: 5px 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Container Principal e Seções */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 100px 0; /* Espaçamento vertical entre seções */
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.section p {
+    font-size: 1.1em;
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+}
+
+.section-dark {
+    background-color: var(--bg-section-secondary);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Cabeçalho (Home) */
+#home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Altura total da tela */
+    padding-top: 80px; /* Compensar navbar */
+    text-align: center;
+}
+
+#home h1 {
+    font-size: 2.8em;
+    font-weight: 300;
+    color: var(--text-secondary);
+    margin-bottom: 0px;
+}
+
+#home h2 {
+    font-size: 4em;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+#home .subtitle {
+    font-size: 1.3em;
+    color: var(--text-primary);
+    margin-bottom: 30px;
+}
+
+/* Animações Simples */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in-down { animation: fadeInDown 0.8s ease-out forwards; }
+.animate-fade-in-up { animation: fadeInUp 0.8s ease-out 0.2s forwards; } /* Delay */
+.animate-fade-in { animation: fadeInUp 0.8s ease-out 0.4s forwards; opacity: 0; } /* Delay maior e começa invisível */
+
+
+/* Botões */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 25px; /* Mais arredondado */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1em;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+    border: none;
+    margin: 10px 5px; /* Espaçamento entre botões */
+}
+.btn i { /* Ícones dentro dos botões */
+    margin-right: 8px;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px); /* Efeito leve de subir */
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+.btn-secondary:hover {
+    background-color: var(--secondary-hover);
+    transform: translateY(-2px);
+}
+
+/* Seção Social */
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Grid responsivo */
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.social-card {
+    background-color: var(--card-bg);
+    padding: 30px 20px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 15px var(--shadow-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px var(--shadow-color);
+}
+
+.social-card a {
+    text-decoration: none;
+    color: var(--text-primary);
+}
+
+.social-icon {
+    font-size: 3em;
+    margin-bottom: 15px;
+    color: var(--primary-color); /* Ícones com a cor primária */
+    transition: color 0.3s ease;
+}
+.social-card:hover .social-icon {
+    color: var(--primary-hover);
+}
+
+.social-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.social-card p {
+    font-size: 1em;
+    color: var(--text-secondary);
+    margin-bottom: 0;
+}
+
+/* Seção Edit */
+#edit .edit-wrapper {
+    max-width: 650px; /* Limita largura do container do vídeo */
+    margin: 30px auto;
+    padding: 20px;
+    background-color: rgba(0,0,0,0.2); /* Fundo sutil para destacar o vídeo */
+    border-radius: 8px;
+}
+
+/* Seção Seu Site e Contato */
+#own-site p, #contact p {
+    margin-bottom: 30px;
+}
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* Seção Configurações */
+.settings-options {
+    max-width: 600px;
+    margin: 40px auto 0 auto;
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 15px var(--shadow-color);
+    text-align: left; /* Alinhar conteúdo à esquerda dentro do card */
+}
+
+.setting-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+.setting-item:last-child {
+    border-bottom: none;
+}
+
+.setting-item span {
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+/* Theme Switcher CSS */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    background-color: var(--secondary-color);
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+    display: flex;
+    align-items: center; /* Centraliza os ícones verticalmente */
+    justify-content: space-between; /* Espaça os ícones */
+    padding: 0 5px; /* Espaçamento interno para os ícones */
+}
+
+.slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+}
+
+input:checked + .slider {
+    background-color: var(--primary-color);
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.slider .icon {
+    color: #fff;
+    font-size: 16px;
+    transition: opacity 0.4s ease;
+}
+
+.slider .sun { opacity: 1; }
+.slider .moon { opacity: 1; }
+
+/* Esconde o ícone não ativo */
+input:checked + .slider .sun { opacity: 0; }
+input:not(:checked) + .slider .moon { opacity: 0; }
+
+/* Ajuste fino para os ícones aparecerem corretamente durante a transição */
+input:checked + .slider .moon { opacity: 1; }
+input:not(:checked) + .slider .sun { opacity: 1; }
+
+
+/* Footer */
+footer {
+    background-color: var(--bg-section-secondary);
+    color: var(--text-secondary);
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 50px; /* Espaço antes do rodapé */
+    border-top: 1px solid var(--border-color);
+    font-size: 0.9em;
+}
+
+footer p {
+    margin-bottom: 5px;
+}
+
+footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--primary-hover);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul {
+        margin-top: 15px;
+        gap: 15px; /* Menor espaço entre links */
+        flex-wrap: wrap; /* Quebrar linha se necessário */
+        justify-content: center;
+    }
+    #navbar {
+        padding: 10px 0;
+    }
+
+    #home h1 { font-size: 2em; }
+    #home h2 { font-size: 3em; }
+    #home .subtitle { font-size: 1.1em; }
+
+    .section { padding: 60px 0; }
+    .section h2 { font-size: 2em; }
+    .section p { font-size: 1em; }
+
+    .btn { padding: 10px 25px; font-size: 0.9em; }
+
+    .social-grid { grid-template-columns: 1fr; /* Uma coluna em telas menores */ }
+
+    .settings-options { padding: 20px; }
+    .setting-item { flex-direction: column; align-items: flex-start; gap: 10px;}
+    .theme-switch-wrapper { margin-top: 5px; align-self: flex-end;} /* Alinha o switch à direita */
+}
+
+@media (max-width: 480px) {
+    .logo { font-size: 1.5em; }
+    nav ul { gap: 10px; }
+    nav ul li a { font-size: 0.9em; }
+
+    #home h1 { font-size: 1.8em; }
+    #home h2 { font-size: 2.5em; }
+    #home .subtitle { font-size: 1em; }
+}
