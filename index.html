@@ -1,31 +1,30 @@
 <!DOCTYPE html>
-<html lang="pt-BR" data-theme="dark">
+<html lang="pt-BR" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@lorenzoedtz - Edição e Criação</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>@lorenzoedtz - Editor de Vídeo | Scarlet Store</title> <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 <body>
     <div id="particles-js"></div>
 
     <nav id="navbar">
         <div class="nav-container">
-            <a href="#home" class="logo">@lorenzoedtz</a>
+            <a href="#home" class="logo animate-glow">@lorenzoedtz</a>
             <ul class="nav-links">
                 <li><a href="#home">Início</a></li>
-                <li><a href="#social">Redes</a></li>
-                <li><a href="#edit">Edits</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
                 <li><a href="#services">Serviços</a></li>
+                <li><a href="#social">Redes</a></li>
+                <li><a href="https://www.instagram.com/lorenzoedtz?igsh=YXRkZHcxbGlzcnI5" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
                 <li><a href="#contact">Contato</a></li>
             </ul>
             <button id="settings-trigger" class="settings-btn" aria-label="Abrir Configurações">
@@ -37,92 +36,108 @@
     <main>
         <section id="home" class="section full-height hero">
             <div class="container hero-content">
-                <h1 class="animate-on-scroll fade-in-down">Lorenzo Edtz</h1>
-                <p class="subtitle animate-on-scroll fade-in-up delay-1">Edição de Vídeos & Conteúdo Criativo</p>
+                <h1 class="hero-title animate-on-scroll fade-in-down">Lorenzo Edtz</h1>
+                <p class="subtitle animate-on-scroll fade-in-up delay-1">
+                    Editor de Alight Motion (Celular) <span class="separator">|</span> Editor de Séries TikTok
+                </p>
                 <div class="animate-on-scroll fade-in-up delay-2">
-                    <a href="#edit" class="btn btn-primary">Ver Meus Edits</a>
-                    <a href="#contact" class="btn btn-secondary">Entrar em Contato</a>
+                    <a href="#portfolio" class="btn btn-primary"><i class="fas fa-play-circle"></i> Ver Portfólio</a>
+                    <a href="#contact" class="btn btn-secondary"><i class="fas fa-envelope"></i> Contratar Site</a>
+                </div>
+            </div>
+             <a href="#portfolio" class="scroll-down-indicator" aria-label="Rolar para baixo">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </section>
+
+        <section id="portfolio" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll fade-in">Portfólio em Destaque</h2>
+
+                <div class="featured-edit animate-on-scroll fade-in-up delay-2">
+                    <div class="edit-wrapper video-wrapper">
+                        <video controls width="100%" preload="metadata" playsinline>
+                            <source src="C:/Users/User/Pictures/LO/lorenzo/dreamin.mp4" type="video/mp4">
+
+                            Seu navegador não suporta a tag de vídeo.
+                        </video>
+                    </div>
+                </div>
+
+                <div class="text-center animate-on-scroll fade-in-up delay-4" style="margin-top: 2.5rem;">
+                    <a href="https://www.tiktok.com/@lorenzoedtz" target="_blank" class="btn btn-secondary">
+                        <i class="fab fa-tiktok"></i> Perfil no TikTok
+                    </a>
+                     <a href="https://www.instagram.com/lorenzoedtz?igsh=YXRkZHcxbGlzcnI5" target="_blank" class="btn btn-secondary">
+                        <i class="fab fa-instagram"></i> Perfil no Instagram
+                    </a>
                 </div>
             </div>
         </section>
 
-        <section id="social" class="section">
+        <section id="services" class="section"> <div class="container">
+                 <h2 class="section-title animate-on-scroll fade-in">Serviços Oferecidos</h2>
+                 <p class="section-subtitle animate-on-scroll fade-in-up delay-1">Edição de vídeo por <strong>@lorenzoedtz</strong> e criação de sites pela <strong>Scarlet Store</strong>.</p>
+
+                 <div class="services-grid">
+                    <div class="service-card animate-on-scroll slide-in-left delay-1">
+                        <i class="fas fa-mobile-alt service-icon"></i>
+                        <h3>Edição Alight Motion (@lorenzoedtz)</h3>
+                        <p>Edição criativa de seus clipes com Alight Motion: transições, efeitos visuais, correção de cor e mais.</p>
+                    </div>
+                    <div class="service-card animate-on-scroll slide-in-right delay-2">
+                         <i class="fab fa-tiktok service-icon"></i>
+                        <h3>Edição TikTok/Reels (@lorenzoedtz)</h3>
+                        <p>Edição dinâmica e otimizada de vídeos curtos (séries, trends, cortes, legendas) para engajamento máximo.</p>
+                    </div>
+                    <div class="service-card animate-on-scroll slide-in-left delay-3"> <i class="fas fa-laptop-code service-icon"></i>
+                        <h3>Criação de Sites (Scarlet Store)</h3>
+                        <p>Quer um site profissional como este? Criamos portfólios e landing pages personalizadas para você ou seu negócio.</p>
+                    </div>
+                 </div>
+
+                 <div class="text-center animate-on-scroll fade-in-up delay-4" style="margin-top: 3rem;">
+                     <a href="https://discord.gg/qnyQDMp7NH" target="_blank" class="btn btn-primary">
+                         <i class="fab fa-discord"></i> Discutir Projeto no Discord
+                     </a>
+                 </div>
+             </div>
+         </section>
+
+        <section id="social" class="section section-alt">
             <div class="container">
-                <h2 class="section-title animate-on-scroll fade-in">Siga-me nas Redes</h2>
-                <div class="social-grid">
-                    <a href="https://www.tiktok.com/@lorenzoedtz" target="_blank" class="social-card animate-on-scroll slide-in-left" title="TikTok @lorenzoedtz">
-                        <i class="fab fa-tiktok social-icon"></i>
-                        <h3>TikTok</h3>
-                        <span>@lorenzoedtz</span>
-                    </a>
-                    <a href="https://www.instagram.com/lorenzoedtz?igsh=YXRkZHcxbGlzcnI5" target="_blank" class="social-card animate-on-scroll slide-in-right" title="Instagram @lorenzoedtz">
+                <h2 class="section-title animate-on-scroll fade-in">Redes e Contato</h2> <p class="section-subtitle animate-on-scroll fade-in-up delay-1">Siga o Lorenzo e entre em contato com a Scarlet Store!</p> <div class="social-grid">
+                    <a href="https://www.instagram.com/lorenzoedtz?igsh=YXRkZHcxbGlzcnI5" target="_blank" class="social-card animate-on-scroll slide-in-left delay-2" title="Instagram @lorenzoedtz">
                         <i class="fab fa-instagram social-icon"></i>
                         <h3>Instagram</h3>
                         <span>@lorenzoedtz</span>
                     </a>
-                     <a href="https://discord.gg/qnyQDMp7NH" target="_blank" class="social-card animate-on-scroll slide-in-left delay-1" title="Comunidade no Discord">
-                        <i class="fab fa-discord social-icon"></i>
+                    <a href="https://www.tiktok.com/@lorenzoedtz" target="_blank" class="social-card animate-on-scroll slide-in-right delay-3" title="TikTok @lorenzoedtz">
+                        <i class="fab fa-tiktok social-icon"></i>
+                        <h3>TikTok</h3>
+                        <span>@lorenzoedtz</span>
+                    </a>
+                     <a href="https://discord.gg/qnyQDMp7NH" target="_blank" class="social-card animate-on-scroll slide-in-left delay-4" title="Discord: Contato/Contratação (Scarlet Store)"> <i class="fab fa-discord social-icon"></i>
                         <h3>Discord</h3>
-                        <span>Comunidade</span>
+                        <span>Scarlet Store</span>
                     </a>
                 </div>
             </div>
         </section>
 
-        <section id="edit" class="section section-alt">
+        <section id="contact" class="section">
             <div class="container">
-                <h2 class="section-title animate-on-scroll fade-in">Meu Último Edit</h2>
-                <div class="edit-wrapper animate-on-scroll fade-in-up">
-                     <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@lorenzoedtz/video/7472145699560279302" data-video-id="7472145699560279302" style="max-width: 500px; min-width: 300px; margin: 20px auto; background: #fff; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-                        <section style="padding: 15px; text-align: center;">
-                           <a target="_blank" title="@lorenzoedtz" style="font-weight: bold; color: #111; text-decoration: none;" href="https://www.tiktok.com/@lorenzoedtz?refer=embed">@lorenzoedtz</a>
-                           <p style="font-size: 0.9em; color: #555; margin: 5px 0;">Assista ao vídeo completo no TikTok!</p>
-                           <a target="_blank" title="♬ som original - @lorenzoedtz" style="font-size: 0.8em; color: #888; text-decoration: none;" href="https://www.tiktok.com/music/som-original-7472145740986125061?refer=embed">♬ som original - @lorenzoedtz</a>
-                       </section>
-                    </blockquote>
-                    <script async src="https://www.tiktok.com/embed.js"></script>
-                </div>
-                <div class="text-center animate-on-scroll fade-in-up delay-1">
-                    <a href="https://www.tiktok.com/@lorenzoedtz" target="_blank" class="btn btn-secondary">
-                        <i class="fab fa-tiktok"></i> Ver Perfil Completo
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <section id="services" class="section">
-             <div class="container">
-                <h2 class="section-title animate-on-scroll fade-in">Crie Seu Próprio Espaço Online</h2>
-                <p class="section-subtitle animate-on-scroll fade-in-up">Quer um site profissional e personalizado como este? Ajudo criadores e negócios a terem uma presença online marcante.</p>
-                <div class="service-highlight animate-on-scroll fade-in-up delay-1">
-                    <i class="fas fa-palette service-icon"></i>
-                    <h3>Design Personalizado</h3>
-                    <p>Sites únicos que refletem sua identidade ou marca.</p>
-                </div>
-                 <div class="service-highlight animate-on-scroll fade-in-up delay-2">
-                    <i class="fas fa-mobile-alt service-icon"></i>
-                    <h3>Responsivo</h3>
-                    <p>Perfeito em qualquer dispositivo: celular, tablet ou desktop.</p>
-                </div>
-                <div class="text-center animate-on-scroll fade-in-up delay-3">
+                <h2 class="section-title animate-on-scroll fade-in">Vamos Trabalhar Juntos?</h2>
+                <p class="section-subtitle animate-on-scroll fade-in-up delay-1">
+                  Scarlet Store</strong>? <br>Entre agora no nosso Discord para discutir seu projeto!
+                </p>
+                <div class="contact-buttons animate-on-scroll fade-in-up delay-2" style="margin-top: 2rem;">
                     <a href="https://discord.gg/qnyQDMp7NH" target="_blank" class="btn btn-primary">
-                        <i class="fab fa-discord"></i> Discutir Projeto no Discord
+                        <i class="fab fa-discord"></i> Entrar no Discord (Scarlet Store)
                     </a>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="section section-alt">
-            <div class="container">
-                <h2 class="section-title animate-on-scroll fade-in">Vamos Conversar?</h2>
-                <p class="section-subtitle animate-on-scroll fade-in-up">Envie sua dúvida, sugestão ou proposta. Estou disponível no Discord e Instagram.</p>
-                <div class="contact-buttons animate-on-scroll fade-in-up delay-1">
-                     <a href="https://discord.gg/qnyQDMp7NH" target="_blank" class="btn btn-secondary">
-                         <i class="fab fa-discord"></i> Chamar no Discord
-                     </a>
-                     <a href="https://www.instagram.com/lorenzoedtz?igsh=YXRkZHcxbGlzcnI5" target="_blank" class="btn btn-secondary">
-                         <i class="fab fa-instagram"></i> Mensagem no Instagram
-                     </a>
+                    <a href="https://www.instagram.com/lorenzoedtz?igsh=YXRkZHcxbGlzcnI5" target="_blank" class="btn btn-secondary">
+                        <i class="fab fa-instagram"></i> Instagram (@lorenzoedtz)
+                    </a>
                 </div>
             </div>
         </section>
@@ -130,8 +145,13 @@
 
     <footer id="footer">
         <div class="container">
-            <p>&copy; <span id="current-year"></span> @lorenzoedtz. Criado com <i class="fas fa-heart" style="color: var(--primary-color);"></i></p>
-            <p>Desenvolvido por <a href="https://discord.gg/qnyQDMp7NH" target="_blank">Scarlet Store</a>.</p>
+            <div class="footer-social">
+                 <a href="https://www.instagram.com/lorenzoedtz?igsh=YXRkZHcxbGlzcnI5" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                 <a href="https://www.tiktok.com/@lorenzoedtz" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                 <a href="https://discord.gg/qnyQDMp7NH" target="_blank" aria-label="Discord da Scarlet Store"><i class="fab fa-discord"></i></a>
+            </div>
+             <p>Portfólio de Edição de <span style="font-weight: 600;">@lorenzoedtz</span> &copy; <span id="current-year"></span></p>
+             <p>Desenvolvido por <a href="https://discord.gg/qnyQDMp7NH" target="_blank">Scarlet Store</a> <i class="fas fa-code" style="color: var(--primary-color);"></i></p>
         </div>
     </footer>
 
@@ -139,10 +159,10 @@
         <div class="modal-content">
             <button id="modal-close-btn" class="modal-close" aria-label="Fechar Configurações">&times;</button>
             <h3 class="modal-title">Configurações do Site</h3>
-
             <div class="setting-group">
-                <label class="setting-label">Tema:</label>
-                <div class="theme-switch-wrapper">
+                <label class="setting-label" for="theme-checkbox">Tema:</label>
+                <div class="switch-container">
+                     <span class="setting-value-label" id="theme-value-label">Claro</span>
                      <label class="theme-switch" for="theme-checkbox">
                         <input type="checkbox" id="theme-checkbox" aria-label="Alternar tema claro/escuro"/>
                         <div class="slider round">
@@ -152,26 +172,47 @@
                     </label>
                 </div>
             </div>
-
             <div class="setting-group">
                 <label class="setting-label">Cor de Destaque:</label>
                 <div class="accent-color-options" id="accent-options">
-                    <button class="color-choice" data-color="hsl(203, 89%, 53%)" style="background-color: hsl(203, 89%, 53%);" aria-label="Selecionar cor Azul"></button> <button class="color-choice" data-color="hsl(28, 100%, 50%)" style="background-color: hsl(28, 100%, 50%);" aria-label="Selecionar cor Laranja"></button> <button class="color-choice" data-color="hsl(328, 90%, 55%)" style="background-color: hsl(328, 90%, 55%);" aria-label="Selecionar cor Rosa"></button> <button class="color-choice" data-color="hsl(145, 63%, 49%)" style="background-color: hsl(145, 63%, 49%);" aria-label="Selecionar cor Verde"></button> <button class="color-choice" data-color="hsl(270, 70%, 60%)" style="background-color: hsl(270, 70%, 60%);" aria-label="Selecionar cor Roxo"></button> </div>
+                    <button class="color-choice" data-color="hsl(203, 89%, 53%)" style="background-color: hsl(203, 89%, 53%);" aria-label="Selecionar cor Azul"></button>
+                    <button class="color-choice" data-color="hsl(28, 100%, 50%)" style="background-color: hsl(28, 100%, 50%);" aria-label="Selecionar cor Laranja"></button>
+                    <button class="color-choice" data-color="hsl(328, 90%, 55%)" style="background-color: hsl(328, 90%, 55%);" aria-label="Selecionar cor Rosa"></button>
+                    <button class="color-choice" data-color="hsl(145, 63%, 49%)" style="background-color: hsl(145, 63%, 49%);" aria-label="Selecionar cor Verde"></button>
+                    <button class="color-choice" data-color="hsl(270, 70%, 60%)" style="background-color: hsl(270, 70%, 60%);" aria-label="Selecionar cor Roxo"></button>
+                    <button class="color-choice" data-color="hsl(0, 89%, 55%)" style="background-color: hsl(0, 89%, 55%);" aria-label="Selecionar cor Vermelho"></button>
+                </div>
             </div>
-
             <div class="setting-group">
                 <label class="setting-label" for="particles-checkbox">Fundo Animado:</label>
-                <div class="theme-switch-wrapper">
-                     <label class="theme-switch" for="particles-checkbox">
-                        <input type="checkbox" id="particles-checkbox" aria-label="Ligar/Desligar fundo animado"/>
+                 <div class="switch-container">
+                    <span class="setting-value-label" id="particles-value-label">Ativado</span>
+                    <label class="theme-switch" for="particles-checkbox">
+                        <input type="checkbox" id="particles-checkbox" checked aria-label="Ligar/Desligar fundo animado"/>
                         <div class="slider round"></div>
-                     </label>
-                 </div>
+                    </label>
+                </div>
             </div>
-
+            <div class="setting-group">
+                <label class="setting-label" for="animations-checkbox">Animações de Scroll:</label>
+                <div class="switch-container">
+                     <span class="setting-value-label" id="animations-value-label">Ativadas</span>
+                    <label class="theme-switch" for="animations-checkbox">
+                        <input type="checkbox" id="animations-checkbox" checked aria-label="Ligar/Desligar animações de scroll"/>
+                        <div class="slider round"></div>
+                    </label>
+                </div>
+            </div>
+             <div class="setting-group reset-group">
+                 <label class="setting-label">Preferências:</label>
+                 <button id="reset-settings-btn" class="btn btn-reset">
+                    <i class="fas fa-undo"></i> Resetar Configurações
+                </button>
+             </div>
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
