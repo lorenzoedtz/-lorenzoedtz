@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt-BR" data-theme="light">
+<html lang="pt-BR" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@lorenzoedtz - Editor de Vídeo | Scarlet Store</title> <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>@lorenzoedtz - Editor de Vídeo | Scarlet Store</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -21,10 +23,9 @@
             <a href="#home" class="logo animate-glow">@lorenzoedtz</a>
             <ul class="nav-links">
                 <li><a href="#home">Início</a></li>
-                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#portfolio">Edição</a></li>
                 <li><a href="#services">Serviços</a></li>
-                <li><a href="#social">Redes</a></li>
-                <li><a href="https://www.instagram.com/lorenzoedtz?igsh=YXRkZHcxbGlzcnI5" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                <li><a href="#social">Redes</a></li> <li><a href="https://www.instagram.com/lorenzoedtz?igsh=YXRkZHcxbGlzcnI5" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
                 <li><a href="#contact">Contato</a></li>
             </ul>
             <button id="settings-trigger" class="settings-btn" aria-label="Abrir Configurações">
@@ -40,26 +41,57 @@
                 <p class="subtitle animate-on-scroll fade-in-up delay-1">
                     Editor de Alight Motion (Celular) <span class="separator">|</span> Editor de Séries TikTok
                 </p>
-                <div class="animate-on-scroll fade-in-up delay-2">
-                    <a href="#portfolio" class="btn btn-primary"><i class="fas fa-play-circle"></i> Ver Portfólio</a>
-                    <a href="#contact" class="btn btn-secondary"><i class="fas fa-envelope"></i> Contratar Site</a>
+                <div class="hero-buttons animate-on-scroll fade-in-up delay-2">
+                    <a href="#social" class="btn btn-primary"><i class="fas fa-link"></i> Redes e Contato</a>
+                    <a href="#portfolio" class="btn btn-secondary"><i class="fas fa-play-circle"></i> Ver Edição</a> </div>
+                <div class="hero-social-links animate-on-scroll fade-in-up delay-3">
+                    <a href="https://www.instagram.com/lorenzoedtz?igsh=YXRkZHcxbGlzcnI5" target="_blank" aria-label="Instagram @lorenzoedtz" title="Instagram @lorenzoedtz">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@lorenzoedtz" target="_blank" aria-label="TikTok @lorenzoedtz" title="TikTok @lorenzoedtz">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                     <a href="https://discord.gg/qnyQDMp7NH" target="_blank" aria-label="Discord Scarlet Store" title="Discord Scarlet Store">
+                        <i class="fab fa-discord"></i>
+                    </a>
                 </div>
             </div>
-             <a href="#portfolio" class="scroll-down-indicator" aria-label="Rolar para baixo">
+             <a href="#social" class="scroll-down-indicator" aria-label="Rolar para baixo">
                 <i class="fas fa-chevron-down"></i>
             </a>
         </section>
 
-        <section id="portfolio" class="section section-alt">
-            <div class="container">
-                <h2 class="section-title animate-on-scroll fade-in">Portfólio em Destaque</h2>
+        <section id="social" class="section section-alt"> <div class="container">
+                <h2 class="section-title animate-on-scroll fade-in">Redes e Contato</h2>
+                 <p class="section-subtitle animate-on-scroll fade-in-up delay-1">Siga o Lorenzo e entre em contato com a Scarlet Store!</p>
+                <div class="social-grid">
+                    <a href="https://www.instagram.com/lorenzoedtz?igsh=YXRkZHcxbGlzcnI5" target="_blank" class="social-card animate-on-scroll slide-in-left delay-2" title="Instagram @lorenzoedtz">
+                        <i class="fab fa-instagram social-icon"></i>
+                        <h3>Instagram</h3>
+                        <span>@lorenzoedtz</span>
+                    </a>
+                    <a href="https://www.tiktok.com/@lorenzoedtz" target="_blank" class="social-card animate-on-scroll slide-in-right delay-3" title="TikTok @lorenzoedtz">
+                        <i class="fab fa-tiktok social-icon"></i>
+                        <h3>TikTok</h3>
+                        <span>@lorenzoedtz</span>
+                    </a>
+                     <a href="https://discord.gg/qnyQDMp7NH" target="_blank" class="social-card animate-on-scroll slide-in-left delay-4" title="Discord: Contato/Contratação (Scarlet Store)">
+                        <i class="fab fa-discord social-icon"></i>
+                        <h3>Discord</h3>
+                        <span>Scarlet Store</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="section"> <div class="container">
+                <h2 class="section-title animate-on-scroll fade-in">Edição em Destaque</h2>
 
                 <div class="featured-edit animate-on-scroll fade-in-up delay-2">
                     <div class="edit-wrapper video-wrapper">
                         <video controls width="100%" preload="metadata" playsinline>
-                            <source src="C:/Users/User/Pictures/LO/lorenzo/dreamin.mp4" type="video/mp4">
-
-                            Seu navegador não suporta a tag de vídeo.
+                            <source src="videos/dreamin.mp4" type="video/mp4">
+                            Seu navegador não suporta a tag de vídeo. Tente <a href="videos/dreamin.mp4">baixar o vídeo</a>.
                         </video>
                     </div>
                 </div>
@@ -75,10 +107,9 @@
             </div>
         </section>
 
-        <section id="services" class="section"> <div class="container">
+        <section id="services" class="section section-alt"> <div class="container">
                  <h2 class="section-title animate-on-scroll fade-in">Serviços Oferecidos</h2>
                  <p class="section-subtitle animate-on-scroll fade-in-up delay-1">Edição de vídeo por <strong>@lorenzoedtz</strong> e criação de sites pela <strong>Scarlet Store</strong>.</p>
-
                  <div class="services-grid">
                     <div class="service-card animate-on-scroll slide-in-left delay-1">
                         <i class="fas fa-mobile-alt service-icon"></i>
@@ -90,12 +121,12 @@
                         <h3>Edição TikTok/Reels (@lorenzoedtz)</h3>
                         <p>Edição dinâmica e otimizada de vídeos curtos (séries, trends, cortes, legendas) para engajamento máximo.</p>
                     </div>
-                    <div class="service-card animate-on-scroll slide-in-left delay-3"> <i class="fas fa-laptop-code service-icon"></i>
+                    <div class="service-card animate-on-scroll slide-in-left delay-3">
+                        <i class="fas fa-laptop-code service-icon"></i>
                         <h3>Criação de Sites (Scarlet Store)</h3>
                         <p>Quer um site profissional como este? Criamos portfólios e landing pages personalizadas para você ou seu negócio.</p>
                     </div>
                  </div>
-
                  <div class="text-center animate-on-scroll fade-in-up delay-4" style="margin-top: 3rem;">
                      <a href="https://discord.gg/qnyQDMp7NH" target="_blank" class="btn btn-primary">
                          <i class="fab fa-discord"></i> Discutir Projeto no Discord
@@ -104,32 +135,10 @@
              </div>
          </section>
 
-        <section id="social" class="section section-alt">
-            <div class="container">
-                <h2 class="section-title animate-on-scroll fade-in">Redes e Contato</h2> <p class="section-subtitle animate-on-scroll fade-in-up delay-1">Siga o Lorenzo e entre em contato com a Scarlet Store!</p> <div class="social-grid">
-                    <a href="https://www.instagram.com/lorenzoedtz?igsh=YXRkZHcxbGlzcnI5" target="_blank" class="social-card animate-on-scroll slide-in-left delay-2" title="Instagram @lorenzoedtz">
-                        <i class="fab fa-instagram social-icon"></i>
-                        <h3>Instagram</h3>
-                        <span>@lorenzoedtz</span>
-                    </a>
-                    <a href="https://www.tiktok.com/@lorenzoedtz" target="_blank" class="social-card animate-on-scroll slide-in-right delay-3" title="TikTok @lorenzoedtz">
-                        <i class="fab fa-tiktok social-icon"></i>
-                        <h3>TikTok</h3>
-                        <span>@lorenzoedtz</span>
-                    </a>
-                     <a href="https://discord.gg/qnyQDMp7NH" target="_blank" class="social-card animate-on-scroll slide-in-left delay-4" title="Discord: Contato/Contratação (Scarlet Store)"> <i class="fab fa-discord social-icon"></i>
-                        <h3>Discord</h3>
-                        <span>Scarlet Store</span>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="section">
-            <div class="container">
+        <section id="contact" class="section"> <div class="container">
                 <h2 class="section-title animate-on-scroll fade-in">Vamos Trabalhar Juntos?</h2>
                 <p class="section-subtitle animate-on-scroll fade-in-up delay-1">
-                  Scarlet Store</strong>? <br>Entre agora no nosso Discord para discutir seu projeto!
+                    Precisa de edição de vídeo profissional com o <strong>@lorenzoedtz</strong> ou de um site incrível como este pela <strong>Scarlet Store</strong>? <br>Entre agora no nosso Discord para discutir seu projeto!
                 </p>
                 <div class="contact-buttons animate-on-scroll fade-in-up delay-2" style="margin-top: 2rem;">
                     <a href="https://discord.gg/qnyQDMp7NH" target="_blank" class="btn btn-primary">
@@ -162,7 +171,7 @@
             <div class="setting-group">
                 <label class="setting-label" for="theme-checkbox">Tema:</label>
                 <div class="switch-container">
-                     <span class="setting-value-label" id="theme-value-label">Claro</span>
+                     <span class="setting-value-label" id="theme-value-label">Escuro</span>
                      <label class="theme-switch" for="theme-checkbox">
                         <input type="checkbox" id="theme-checkbox" aria-label="Alternar tema claro/escuro"/>
                         <div class="slider round">
